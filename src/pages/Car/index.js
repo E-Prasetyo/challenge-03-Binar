@@ -44,6 +44,7 @@ const Car = () => {
       handleShow();
       setTimeout(() => {
         handleClose();
+        setSearchParams({});
       }, 1500);
     }
     if (searchParams.get('delete') === 'true') {
@@ -52,6 +53,7 @@ const Car = () => {
       console.log('delete');
       setTimeout(() => {
         handleClose();
+        setSearchParams({});
       }, 1500);
     }
   }, [searchParams.get('save'), searchParams.get('delete'), data]);
