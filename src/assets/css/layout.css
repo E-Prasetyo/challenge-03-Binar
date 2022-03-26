@@ -1,0 +1,17 @@
+.font-menu{
+  font-size: 10px;
+}
+.container-content{
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.action-menu:hover{
+  background-color: lightgray;
+}
+.action-active{  
+  background-color: lightgray;
+}
+.myborder{
+  border: 2px solid black;
+}

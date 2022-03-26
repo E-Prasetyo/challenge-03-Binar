@@ -1,0 +1,9 @@
+.full-body{
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+}
+.bg-secondary {
+  --bs-bg-opacity: 50%;
+  background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+}
