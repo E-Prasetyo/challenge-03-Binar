@@ -34,9 +34,8 @@ const Car = () => {
   const handleCloseDelete = () => {
     setShowDelete(false);
   };
-  const handleEdit = () => {
-    console.log('edit');
-    return navigate('/car/edit');
+  const handleEdit = (id) => {
+    return navigate(`/car/edit/${id}`);
   };
   useEffect(() => {
     if (searchParams.get('save') === 'true') {
@@ -56,7 +55,16 @@ const Car = () => {
         setSearchParams({});
       }, 1500);
     }
-  }, [searchParams.get('save'), searchParams.get('delete'), data]);
+    if (searchParams.get('edit') === 'true') {
+      setMessage({ message: 'Data Berhasil DiEdit', class: 'bg-success' });
+      handleShow();
+      console.log('delete');
+      setTimeout(() => {
+        handleClose();
+        setSearchParams({});
+      }, 1500);
+    }
+  }, [searchParams.get('save'), searchParams.get('delete'), searchParams.get('edit'), data]);
 
   return (
     <div className="container-fluid bg-light px-0">

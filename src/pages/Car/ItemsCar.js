@@ -39,7 +39,7 @@ const ItemsCar = ({
               <span><img src={deleteIcon} alt="" /></span>
               {' '}Delete
             </button>
-            <button className="btn btn-success w-100 mx-2" onClick={handleEdit}>
+            <button className="btn btn-success w-100 mx-2" onClick={handleEdit.bind(null, item.id)}>
               <span><img src={deleteIcon} alt="" /></span>
               {' '}Edit
             </button>

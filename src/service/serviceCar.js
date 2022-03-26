@@ -38,3 +38,28 @@ export const serviceDeleteCar = (id) => {
   }
   return result;
 };
+
+export const serviceEditCar = (id, dataNew) => {
+  let result;
+  console.log(id, dataNew);
+  const { name, price } = dataNew;
+  const idIndex = data.findIndex((value) => value.id === +id);
+  const oldData = data.find((value) => value.id === +id);
+  const newCar = {
+    id: oldData.id,
+    username: `${name}${oldData.id}`,
+    type: `type9${oldData.id}`,
+    Car: `${name}${oldData.id}`,
+    startRent: `Start Rent9${oldData.id}`,
+    finishRent: `Finish Rent9${oldData.id}`,
+    price: `${price}`,
+    status: `Status9${oldData.id}`,
+  };
+  if (idIndex !== undefined) {
+    data[idIndex] = newCar;
+    result = true;
+  } else {
+    result = false;
+  }
+  return result;
+};

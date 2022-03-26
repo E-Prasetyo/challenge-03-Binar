@@ -62,7 +62,7 @@ function App() {
           )}
       />
       <Route
-        path="/car/edit"
+        path="/car/edit/:id"
           // exact
         element={(
           <RequireAuth>
